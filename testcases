@@ -6,5 +6,8 @@ curl http://localhost:8000/posts
 
 #publish a post
 
-curl http://localhost:8000/post -d "post_id=1"  -d "title='fred'" -d "body='this stuff'"
+curl http://localhost:8000/post  -d "title='fred'" -d "body='this stuff'"
+
+# see if we added 
+curl http://localhost:8000/posts
 

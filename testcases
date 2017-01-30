@@ -1,7 +1,10 @@
 
 endpoints --prefix=mycontroller --host=localhost:8000 &
 
-curl http://localhost:8000/post
+# print all the posts
+curl http://localhost:8000/posts
 
-curl http://localhost:8000/post -d "name=hi"
+#publish a post
+
+curl http://localhost:8000/post -d "post_id=1"  -d "title='fred'" -d "body='this stuff'"
 

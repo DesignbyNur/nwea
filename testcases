@@ -1,0 +1,7 @@
+
+endpoints --prefix=mycontroller --host=localhost:8000 &
+
+curl http://localhost:8000/post
+
+curl http://localhost:8000/post -d "name=hi"
+

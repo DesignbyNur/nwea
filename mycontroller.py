@@ -14,8 +14,9 @@ class Posts(Controller):
     def GET(self):
         conn = sqlite3.connect('blog.db')
         c = conn.cursor()
-        for row in c.execute('SELECT * FROM posts'):
-            print row 
+        c.execute('SELECT  * FROM posts') 
+        json_string = json.dumps(c.fetchall())
+        return json_string
         conn.close()
 
 class Post(Controller):
